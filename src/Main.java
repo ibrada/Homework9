@@ -28,16 +28,14 @@ public class Main {
 
     public static void task2() {
         int[] expenses = generateRandomArray();
-        int maxExpense = 100000;
+        int maxExpense = expenses[0];
         int minExpense = 200000;
-        for (int i = 0; i < expenses.length; i++) {
-            if (expenses[i] > maxExpense) {
-                maxExpense = expenses[i];
+        for (int expens : expenses) {
+            if (expens > maxExpense) {
+                maxExpense = expens;
             }
-        }
-        for (int i = 0; i < expenses.length; i++) {
-            if (expenses[i] < minExpense) {
-                minExpense = expenses[i];
+            if (expens < minExpense) {
+                minExpense = expens;
             }
         }
         System.out.println("Максимальная сумма трат за день составила " + maxExpense + " рублей.");
@@ -65,3 +63,4 @@ public class Main {
         }
     }
 }
+
